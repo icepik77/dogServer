@@ -1,0 +1,689 @@
+//font-family: 'Merriweather', serif;
+//font-family: 'Oswald', sans-serif;
+body{
+    scroll-behavior: smooth;
+}
+*{
+    box-sizing: border-box;
+}
+.wrapper{
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.header{
+    height: 922px;
+    position: relative;
+    background-color: #E5E5E5;
+    height: 922px;
+    position: relative;
+    background-color: #E5E5E5;
+    height: 922px;
+    position: relative;
+    background-color: #E5E5E5;
+    overflow: hidden;
+    &__high-row{  
+        display: flex;
+        padding-top: 10px;
+    }
+    &__mobile-menu{
+        display: none;
+        position: absolute;
+        height: 100%;
+        right: -100%;
+        width: 80%;
+        z-index: 2;
+        background-color: #FFFAFA;
+        transition: 0.4s;
+        & ul{
+            list-style: none;
+            float: right;
+            width: 100%;
+            padding-left: 0;
+            margin-top: 72px;
+            & li{
+                margin-bottom: 12px;
+                border-bottom: 1px solid gray;
+                text-align: center;
+                padding-bottom: 10px;
+                & a{
+                    text-decoration: none;
+                    color: black;
+                    font-family: 'Merriweather', serif;
+                }
+            }
+        }
+    }
+    &__mobile-menu.active{
+        right: 0;
+        transition: 0.4s;
+    }
+    &__menu-burger{
+        //display: flex;
+        display: none;
+        position: relative;
+        z-index: 4;
+        width: 42px;
+        height: 20px;
+        margin-top: 31px;
+        margin-left: 30px;
+        & span {
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 100%;
+            height: 3px;
+            background-color: black;
+            z-index: 3;
+            transition: 0.3s;
+        }
+    }
+    &__menu-burger:before {
+        content: "";
+        position: absolute;
+        background-color: black;
+        width: 100%;
+        height: 3px;
+        top: 0;
+        left: 0;
+        transition: 0.3s;
+    }
+    &__menu-burger:after {
+        content: "";
+        display: inline-flex;
+        position: absolute;
+        background-color: black;
+        width: 100%;
+        height: 3px;
+        bottom: 0;
+        left: 0;
+        transition: 0.3s;
+    }
+    &__menu-burger.active::before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+    &__menu-burger.active::after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+    &__menu-burger.active span {
+        transform: scale(0);
+    }
+    &__logo{
+        display: inline-block;
+        margin-left: 110px;
+    }
+    &__menu-and-burger{
+        display: flex;
+        margin-left: auto;
+        padding-right: 6%;
+    }
+    &__menu{
+        display: flex;
+        font-family: 'Merriweather', serif;
+        font-size: 14px;
+        color: black;
+        margin-top: 24px;
+        & ul{
+            list-style: none;
+            display: flex;
+            & li{
+                margin-left: 50px;
+                & a{
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+    }
+    &__hide-menu{
+        display: block;
+        opacity: 0;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        width: 200px;
+        margin-left: -83px;
+        & ul{
+            list-style: none;
+            padding: 0 0;
+            margin: 0 0;
+        }
+        & li{
+            text-align: center;
+            margin-bottom: 6px;
+        }
+        & a {
+            text-align: center;
+            color: black;
+            text-decoration: none;
+            font-family: 'Merriweather', serif;
+            font-size: 14px;
+            &:hover{
+                font-size: 15px;
+                transition: 0.2s;
+            }
+        }
+    }
+    &__hide-menu.active{
+        opacity: 1;
+        transition: 0.4s;
+    }
+    &__row{
+        display: flex;
+        padding-top: 4%;
+        margin-top: 2%;
+    }
+    &__left-div{
+        padding-left: 4%;
+        padding-right: 30px;
+        width: 50%;
+    }
+    &__right-div{
+        width: 50%;
+    }
+    &__image{
+        float: right;
+        & img{
+            width: 100%;
+        }
+        
+    }
+    &__description{
+        max-width: 688px;
+        font-family: 'Merriweather', serif;
+        & span{
+            font-size: 4em;
+            font-family: 'Oswald', sans-serif;
+        }
+        & a {
+            color: black;
+        }
+
+    }
+    &__towers{
+        font-family: 'Oswald', sans-serif;
+        font-size: 24px;
+        margin-top: 9%;
+        & span{
+            font-size: 48px;
+            font-family: 'Oswald', sans-serif;
+        }
+    }
+}
+@media(max-width:1440px){
+    .header{
+        height: 800px;
+        &__logo{
+            margin-left: 3%;
+        }
+        &__description{
+            & span{
+                font-size: 2em;
+
+            }
+        }
+        &__row{
+            padding-top: 9%;
+        }
+        &__towers{
+            & span{
+                font-size: 1.3em;
+            }
+        }
+        &__menu{
+            & ul{
+                & li{
+                    margin-left: 25px;
+                }
+            }
+        }
+    }
+}
+@media(max-width:1024px){
+    .header{
+        height: 760px;
+        &__menu{
+            & ul{
+                & li{
+                    margin-left: 17px;
+                    & a{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        &__description{
+            font-size: 14px;
+        }
+        &__towers{
+            font-size: 21px;
+        }
+    }
+}
+@media(max-width:768px){
+    .header{
+        height: 20%;
+        &__row{
+            flex-direction: column;
+        }
+        &__left-div{
+            width: 100%;
+        }
+        &__right-div{
+            width: 100%;
+            order: -1;
+        }
+        &__towers{
+            padding-bottom: 8px;
+            font-size: 12px;
+            margin-top: 2px;
+        }
+        &__menu{
+            display: none;
+        }
+        &__menu-burger{
+            display: flex;
+        }
+        &__mobile-menu{
+            display: block;
+        }
+    }
+}
+@media(max-width:320px){
+    .header{
+        &__description{
+            & span{
+                font-size: 1.5em;
+            }
+        }
+    }
+}
+.list-breeders{
+    display: block;
+    position: relative;
+    &__description-row{
+        display: flex;
+    }
+    &__description{
+        padding-left: 4%;
+        margin-top: 168px;
+        width: 745px;
+        font-family: 'Merriweather', serif;
+        font-size: 18px;
+        & span{
+            font-size: 48px;
+            font-family: 'Oswald', sans-serif;
+        }
+    }
+    &__reference{
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        margin-top: 284px;
+        margin-left: 7%;
+        & a{
+            color: black;
+            text-decoration: none;
+            font-family: 'Merriweather', serif;
+            font-size: 14;
+        }
+        & img{
+            margin-right: 10px;
+            width: 60px;
+            height: 60px;
+        }
+    }
+    &__dogs{
+        margin-top: 120px;
+        margin-bottom: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        & >:nth-child(2){
+            margin: 0 20px;
+            & p{
+                top: -24px;
+            }
+            & span{
+                line-height: 1;
+            }
+        }
+        & >:nth-child(4){
+            margin-top: 170px;
+            margin-right: 20px;
+        }
+        & :nth-child(5){
+            margin-top: 170px;
+        }
+    }
+    &__card{
+        width: 30%;
+        height: 400px;
+        position: relative;
+        & img{
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+        & p{
+            position: absolute;
+            font-family: 'Merriweather', serif;
+            width: 210px;
+            right: 53px;
+            margin: 0 0;
+        }
+        & span{
+            font-family: 'Oswald', sans-serif;
+            line-height: 2;
+            font-size: 2em;
+        }
+        & a{
+            color: black;
+            font-size: 18px;
+        }
+    }
+}
+@media(max-width:1024px){
+    .list-breeders{
+        &__card{
+            height: 330px;
+            & p{
+                left: 0;
+            }
+        }
+    }
+}
+@media(max-width:768px){
+    .list-breeders{
+        &__description-row{
+            flex-wrap: wrap;
+        }
+        &__description{
+            margin-top: 20px;
+            & span{
+                font-size: 2em;
+            }
+        }
+        &__reference{
+            margin-top: 59px;
+            margin-left: 20px;
+        }
+        &__dogs{
+            flex-direction: column;
+            & >:nth-child(2){
+                margin: 0 auto;
+                margin-top: 100px;
+                & p{
+                    top: -58px;
+                }
+            }
+            & >:nth-child(4){
+                margin: 0 auto;
+                margin-top: 100px;
+            }
+            & >:nth-child(5){
+                margin: 0 auto;
+                margin-top: 125px;
+            }
+        }
+        &__card{
+            margin: 0 auto;
+            margin-top: 100px;
+            max-width: 546px;
+            width: 100%;
+            & p{
+                left: 47%;
+                top: -59px;
+            }
+            & span{
+                font-size: 2em;
+            }
+            & img{
+                position: static;
+            }
+        }
+    }
+}
+@media(max-width:425px){
+    .list-breeders{
+        &__card{
+            & p{
+                top: -80px;
+            }
+        }
+        &__dogs{
+            & :nth-child(2){
+                & p{
+                    left: 40%;
+                    top: -80px;
+                }
+            }
+        }
+        
+    }
+}
+@media(max-width:375px){
+    .list-breeders{
+        &__card{
+            & p{
+                left: 36%;
+            }
+        }
+        &__dogs{
+            & :nth-child(2) p{
+                left: 34%;
+            }
+        }
+    }
+}
+@media(max-width:320px){
+    .list-breeders{
+        &__description{
+            & span{
+                font-size: 1.5em;
+            }
+        }
+        &__reference{
+            & img{
+                width: 40px;
+                height: 40px;
+            }
+        }
+        &__card{
+            margin-top: 0px;
+            & p{
+                left: 32%;
+                top: -101px;
+            }
+            & span{
+                font-size: 1.5em;
+            }
+            & a{
+                font-size: 13px;
+            }
+        }
+        &__dogs{
+            & :nth-child(2){
+                margin-top: 0px;
+                & p{
+                    left: 32%;
+                }
+            }
+            & :nth-child(4){
+                margin-top: 0px;
+            }
+            & :nth-child(5){
+                margin-top: 0px;
+            }
+        }
+    }
+}
+.footer{
+    display: block;
+    background: radial-gradient(65.16% 565.02% at 81.43% 50%, #E0E0E0 0%, #FFFDFA 50.61%, #E0E0E0 100%);
+    position: relative;
+    height: 750px;
+    &__row{
+        display: flex;
+        padding-top: 7%;
+        padding-left: 7%;
+    }
+    &__logo{
+        width: 294px;
+        height: 118px;
+    }
+    &__social{
+        padding-left: 17px;
+        margin-top: 40px;
+        & p{
+            font-size: 18px;
+            font-family: 'Merriweather', serif;
+        }
+        & img{
+            margin-right: 7px;
+            cursor: pointer;
+        }
+    }
+    &__phone{
+        padding-left: 8%;
+        margin-top: 35px;
+        font-size: 18px;
+        font-family: 'Merriweather', serif;
+        & span {
+            font-size: 38px;
+            font-family: 'Oswald', sans-serif;
+            line-height: 1.8;
+        }
+    }
+    &__about-dog{
+        margin-left: 8%;
+        & span {
+            font-size: 38px;
+            font-family: 'Oswald', sans-serif;
+            line-height: 1.8;
+        }
+        & ul {
+            list-style: none;
+            padding-left: 0px;
+            & li{
+                font-family: 'Merriweather', serif;
+                font-size: 18px;
+                padding-bottom: 10px;
+                & a {
+                    color: black;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    &__programms{
+        margin-left: 8%;
+        & span{
+            font-size: 38px;
+            font-family: 'Oswald', sans-serif;
+            line-height: 1.8;
+        }
+        & ul {
+            list-style: none;
+            padding-left: 0px;
+            & li{
+                font-family: 'Merriweather', serif;
+                font-size: 18px;
+                padding-bottom: 10px;
+                & a {
+                    color: black;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+}
+@media(max-width:1440px){
+    .footer{
+        &__row{
+            padding-left: 0;
+        }
+        &__phone{
+            padding-left: 14px;
+        }
+        &__social{
+            padding-left: 21px;
+        }
+        &__about-dog, .footer__programms{
+            & span{
+                font-size: 26px;
+            }
+        }
+        &__programms{
+            margin-left: 7%;
+        }
+    }
+}
+@media(max-width:1024px){
+    .footer{
+        &__phone{
+            margin-top: 0;
+        }
+        &__about-dog{
+            padding-top: 46px;
+        }
+    }
+}
+@media(max-width:768px){
+    .footer{
+        height: 560px;
+        &__about-dog{
+            display: none;
+        }
+        &__programms{
+            display: none;
+        }
+        &__phone{
+            margin-top: 56px;
+        }
+        &__logo-and-social{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        &__social{
+            margin-top: 0;
+        }
+        &__phone{
+            display: flex;
+            justify-content: center;
+            & p{
+                width: 283px;
+            }
+        }
+
+    }
+}
+@media(max-width:425px){
+    .footer{
+        height: 410px;
+        &__logo{
+            width: 254px;
+            & img{
+                width: 100%;
+            }
+        }
+        &__social{
+            padding-right: 22px;
+        }
+        &__phone{
+            font-size: 12px;
+            margin-top: 29px;
+            padding-left: 0px;
+            text-align: center;
+            & p {
+                width: 188px;
+            }
+            & span{
+                font-size: 28px;
+            }
+        }
+    }
+}

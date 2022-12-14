@@ -1,0 +1,188 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.5.17",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Cube",
+            "scale" : [
+                2,
+                2,
+                2
+            ]
+        },
+        {
+            "name" : "Light",
+            "rotation" : [
+                0.16907575726509094,
+                0.7558803558349609,
+                -0.27217137813568115,
+                0.570947527885437
+            ],
+            "translation" : [
+                7.328165054321289,
+                5.467243671417236,
+                3.055176019668579
+            ]
+        },
+        {
+            "name" : "Light.001",
+            "translation" : [
+                -1.600000023841858,
+                9.300000190734863,
+                9.5
+            ]
+        },
+        {
+            "name" : "\u0421\u043e\u043b\u043d\u0446\u0435",
+            "translation" : [
+                9.965032577514648,
+                5.523870468139648,
+                -1.3398749828338623
+            ]
+        },
+        {
+            "name" : "\u041a\u0430\u043c\u0435\u0440\u0430",
+            "rotation" : [
+                0.7553750276565552,
+                0.18609552085399628,
+                -0.2425244003534317,
+                0.5796196460723877
+            ],
+            "translation" : [
+                12.022407531738281,
+                1.4020121097564697,
+                33.09979248046875
+            ]
+        },
+        {
+            "name" : "Light.002",
+            "rotation" : [
+                0.16907575726509094,
+                0.7558803558349609,
+                -0.27217137813568115,
+                0.570947527885437
+            ],
+            "translation" : [
+                -5.623315811157227,
+                6.878043174743652,
+                20.39838409423828
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "Material",
+            "pbrMetallicRoughness" : {}
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Cube",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TANGENT" : 2,
+                        "TEXCOORD_0" : 3
+                    },
+                    "indices" : 4,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 35274,
+            "max" : [
+                1.9807162284851074,
+                6.773235321044922,
+                7.480999946594238
+            ],
+            "min" : [
+                -2.016488552093506,
+                -4.4282002449035645,
+                -7.968899250030518
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 35274,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 35274,
+            "type" : "VEC4"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5126,
+            "count" : 35274,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5123,
+            "count" : 35706,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 423288,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 423288,
+            "byteOffset" : 423288
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 564384,
+            "byteOffset" : 846576
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 282192,
+            "byteOffset" : 1410960
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 71412,
+            "byteOffset" : 1693152
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 1764564,
+            "uri" : "dog.bin"
+        }
+    ]
+}

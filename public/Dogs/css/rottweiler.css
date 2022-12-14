@@ -1,0 +1,892 @@
+body {
+  scroll-behavior: smooth;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.header {
+  height: 922px;
+  position: relative;
+  background-color: #E5E5E5;
+  height: 922px;
+  position: relative;
+  background-color: #E5E5E5;
+  height: 922px;
+  position: relative;
+  background-color: #E5E5E5;
+  overflow: hidden;
+}
+
+.header__high-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 10px;
+}
+
+.header__mobile-menu {
+  display: none;
+  position: absolute;
+  height: 100%;
+  right: -100%;
+  width: 80%;
+  z-index: 2;
+  background-color: #FFFAFA;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.header__mobile-menu ul {
+  list-style: none;
+  float: right;
+  width: 100%;
+  padding-left: 0;
+  margin-top: 72px;
+}
+
+.header__mobile-menu ul li {
+  margin-bottom: 12px;
+  border-bottom: 1px solid gray;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.header__mobile-menu ul li a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Merriweather', serif;
+}
+
+.header__mobile-menu.active {
+  right: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.header__menu-burger {
+  display: none;
+  position: relative;
+  z-index: 4;
+  width: 42px;
+  height: 20px;
+  margin-top: 31px;
+  margin-left: 30px;
+}
+
+.header__menu-burger span {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  z-index: 3;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header__menu-burger:before {
+  content: "";
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 3px;
+  top: 0;
+  left: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header__menu-burger:after {
+  content: "";
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header__menu-burger.active::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 9px;
+}
+
+.header__menu-burger.active::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 9px;
+}
+
+.header__menu-burger.active span {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.header__logo {
+  display: inline-block;
+  margin-left: 110px;
+}
+
+.header__menu-and-burger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  padding-right: 6%;
+}
+
+.header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Merriweather', serif;
+  font-size: 14px;
+  color: black;
+  margin-top: 24px;
+}
+
+.header__menu ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__menu ul li {
+  margin-left: 50px;
+}
+
+.header__menu ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.header__hide-menu {
+  display: block;
+  opacity: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  width: 200px;
+  margin-left: -83px;
+}
+
+.header__hide-menu ul {
+  list-style: none;
+  padding: 0 0;
+  margin: 0 0;
+}
+
+.header__hide-menu li {
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.header__hide-menu a {
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  font-family: 'Merriweather', serif;
+  font-size: 14px;
+}
+
+.header__hide-menu a:hover {
+  font-size: 15px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.header__hide-menu.active {
+  opacity: 1;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.header__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 4%;
+  margin-top: 2%;
+}
+
+.header__left-div {
+  padding-left: 4%;
+  padding-right: 30px;
+  width: 50%;
+}
+
+.header__right-div {
+  width: 50%;
+}
+
+.header__image {
+  float: right;
+}
+
+.header__image img {
+  width: 100%;
+}
+
+.header__description {
+  max-width: 688px;
+  font-family: 'Merriweather', serif;
+}
+
+.header__description span {
+  font-size: 4em;
+  font-family: 'Oswald', sans-serif;
+}
+
+.header__description a {
+  color: black;
+}
+
+.header__towers {
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+  margin-top: 9%;
+}
+
+.header__towers span {
+  font-size: 48px;
+  font-family: 'Oswald', sans-serif;
+}
+
+@media (max-width: 1440px) {
+  .header {
+    height: 800px;
+  }
+  .header__logo {
+    margin-left: 3%;
+  }
+  .header__description span {
+    font-size: 2em;
+  }
+  .header__row {
+    padding-top: 9%;
+  }
+  .header__towers span {
+    font-size: 1.3em;
+  }
+  .header__menu ul li {
+    margin-left: 25px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    height: 760px;
+  }
+  .header__menu ul li {
+    margin-left: 17px;
+  }
+  .header__menu ul li a {
+    font-size: 12px;
+  }
+  .header__description {
+    font-size: 14px;
+  }
+  .header__towers {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 20%;
+  }
+  .header__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header__left-div {
+    width: 100%;
+  }
+  .header__right-div {
+    width: 100%;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .header__towers {
+    padding-bottom: 8px;
+    font-size: 12px;
+    margin-top: 2px;
+  }
+  .header__menu {
+    display: none;
+  }
+  .header__menu-burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header__mobile-menu {
+    display: block;
+  }
+}
+
+@media (max-width: 320px) {
+  .header__description span {
+    font-size: 1.5em;
+  }
+}
+
+.content {
+  display: block;
+}
+
+.character {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 3%;
+  padding-bottom: 11%;
+}
+
+.character__left-part {
+  width: 50%;
+}
+
+.character__right-part {
+  width: 50%;
+  padding-left: 8%;
+}
+
+.character__big-text {
+  max-width: 830px;
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  margin-left: 4%;
+}
+
+.character__big-text span {
+  font-family: 'Oswald', sans-serif;
+  font-size: 48px;
+}
+
+.character__short-text {
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.character__short-text span {
+  font-family: 'Oswald', sans-serif;
+  font-size: 48px;
+}
+
+.character__image {
+  position: relative;
+  margin-top: 7%;
+}
+
+.character__dog-image {
+  position: absolute;
+  top: 53px;
+  left: -71px;
+}
+
+.character__circle {
+  position: absolute;
+  top: 0;
+  left: 0px;
+}
+
+.training {
+  padding-top: 8%;
+  padding-bottom: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #327551;
+}
+
+.training__text-left {
+  width: 60%;
+  padding-left: 4%;
+  color: white;
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+}
+
+.training__text-left span {
+  font-size: 48px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.training__text-right {
+  width: 40%;
+  color: white;
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  margin-left: 12%;
+  padding-right: 85px;
+}
+
+.training__text-right :first-child {
+  line-height: 1.8;
+  margin-top: 0;
+}
+
+.training__text-right :last-child {
+  border-bottom: 3px black solid;
+  padding-bottom: 10px;
+}
+
+.training span {
+  font-size: 48px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.breeders {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  padding-bottom: 12%;
+}
+
+.breeders__title {
+  font-size: 48px;
+  font-family: 'Oswald', sans-serif;
+  width: 100%;
+}
+
+.breeders__tower {
+  width: 60%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.breeders__tower ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.breeders__tower ul :first-child {
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+}
+
+.breeders__tower ul li {
+  margin-bottom: 10px;
+}
+
+.breeders__tower ul a {
+  color: black;
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+}
+
+.breeders__second-town {
+  margin-left: 41%;
+}
+
+.breeders__third-town {
+  margin-left: 22%;
+  list-style: none;
+  padding-left: 0;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
+
+.breeders__third-town :first-child {
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+}
+
+.breeders__third-town li {
+  margin-bottom: 10px;
+}
+
+.breeders__third-town a {
+  color: black;
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+}
+
+.breeders__reference {
+  max-width: 726px;
+  margin-top: 115px;
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+}
+
+.breeders__right-part {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.breeders__image img {
+  width: 100%;
+}
+
+@media (max-width: 1440px) {
+  .character__big-text {
+    font-size: 14px;
+  }
+  .character__big-text span {
+    line-height: 2;
+  }
+  .character__dog-image {
+    position: static;
+    top: 53px;
+    left: 0;
+    width: 100%;
+  }
+  .training {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .training__text-left {
+    width: 90%;
+    padding-right: 85px;
+  }
+  .training__text-right {
+    width: 90%;
+    margin-left: 4%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .character {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .character__left-part {
+    width: 100%;
+  }
+  .character__right-part {
+    width: 100%;
+    padding-left: 5%;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .training span {
+    line-height: 2;
+    font-size: 30px;
+  }
+  .training__text-left {
+    font-size: 12px;
+  }
+  .training__text-right {
+    font-size: 12px;
+    padding-right: 105px;
+  }
+  .breeders__second-town {
+    margin-left: 15%;
+  }
+  .breeders__third-town {
+    margin-left: 15%;
+  }
+  .breeders__reference {
+    padding-right: 8px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .character__short-text span {
+    font-size: 35px;
+  }
+  .character__big-text span {
+    font-size: 40px;
+  }
+  .training__text-left {
+    padding-right: 25px;
+  }
+  .training__text-right {
+    padding-right: 45px;
+  }
+  .breeders__title {
+    text-align: center;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .breeders__tower {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .breeders__reference {
+    text-align: center;
+    margin-top: 60px;
+  }
+  .breeders__right-part {
+    text-align: center;
+    width: 100%;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .breeders__image {
+    display: none;
+  }
+  .breeders__second-town {
+    margin-left: 0;
+  }
+  .breeders__third-town {
+    margin-left: 0;
+    padding-left: 9px;
+  }
+}
+
+@media (max-width: 375px) {
+  .character__short-text {
+    font-size: 16px;
+  }
+  .character__short-text span {
+    font-size: 30px;
+  }
+  .character__big-text {
+    font-size: 12px;
+    padding-right: 10px;
+  }
+  .character__big-text span {
+    font-size: 30px;
+  }
+  .training span {
+    font-size: 25px;
+  }
+}
+
+.footer {
+  display: block;
+  background: radial-gradient(65.16% 565.02% at 81.43% 50%, #E0E0E0 0%, #FFFDFA 50.61%, #E0E0E0 100%);
+  position: relative;
+  height: 750px;
+}
+
+.footer__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 7%;
+  padding-left: 7%;
+}
+
+.footer__logo {
+  width: 294px;
+  height: 118px;
+}
+
+.footer__social {
+  padding-left: 17px;
+  margin-top: 40px;
+}
+
+.footer__social p {
+  font-size: 18px;
+  font-family: 'Merriweather', serif;
+}
+
+.footer__social img {
+  margin-right: 7px;
+  cursor: pointer;
+}
+
+.footer__phone {
+  padding-left: 8%;
+  margin-top: 35px;
+  font-size: 18px;
+  font-family: 'Merriweather', serif;
+}
+
+.footer__phone span {
+  font-size: 38px;
+  font-family: 'Oswald', sans-serif;
+  line-height: 1.8;
+}
+
+.footer__about-dog {
+  margin-left: 8%;
+}
+
+.footer__about-dog span {
+  font-size: 38px;
+  font-family: 'Oswald', sans-serif;
+  line-height: 1.8;
+}
+
+.footer__about-dog ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.footer__about-dog ul li {
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+.footer__about-dog ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+.footer__programms {
+  margin-left: 8%;
+}
+
+.footer__programms span {
+  font-size: 38px;
+  font-family: 'Oswald', sans-serif;
+  line-height: 1.8;
+}
+
+.footer__programms ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.footer__programms ul li {
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+.footer__programms ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+@media (max-width: 1440px) {
+  .footer__row {
+    padding-left: 0;
+  }
+  .footer__phone {
+    padding-left: 14px;
+  }
+  .footer__social {
+    padding-left: 21px;
+  }
+  .footer__about-dog span, .footer .footer__programms span {
+    font-size: 26px;
+  }
+  .footer__programms {
+    margin-left: 7%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer__phone {
+    margin-top: 0;
+  }
+  .footer__about-dog {
+    padding-top: 46px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    height: 560px;
+  }
+  .footer__about-dog {
+    display: none;
+  }
+  .footer__programms {
+    display: none;
+  }
+  .footer__phone {
+    margin-top: 56px;
+  }
+  .footer__logo-and-social {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer__social {
+    margin-top: 0;
+  }
+  .footer__phone {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer__phone p {
+    width: 283px;
+  }
+}
+
+@media (max-width: 425px) {
+  .footer {
+    height: 410px;
+  }
+  .footer__logo {
+    width: 254px;
+  }
+  .footer__logo img {
+    width: 100%;
+  }
+  .footer__social {
+    padding-right: 22px;
+  }
+  .footer__phone {
+    font-size: 12px;
+    margin-top: 29px;
+    padding-left: 0px;
+    text-align: center;
+  }
+  .footer__phone p {
+    width: 188px;
+  }
+  .footer__phone span {
+    font-size: 28px;
+  }
+}

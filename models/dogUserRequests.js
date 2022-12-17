@@ -11,7 +11,6 @@ const pool = new Pool({
 
 export async function create(nameUser, mail, message){
     
-    console.log("Почта: " + message)
     const user = await pool.query('INSERT INTO user_dog (name, mail, message) values ($1, $2, $3) RETURNING *', [nameUser, mail, message])
     .catch(function(error){
         console.log(error.message)
@@ -27,12 +26,34 @@ export async function create(nameUser, mail, message){
 }
 
 export async function show(){
-    try {
-        const users = await pool.query('SELECT * FROM user_dog')
-        return users 
-    } catch (error) {
-       console.log(error)
-    }
+    
+    // await pool.query('SELECT * FROM user_dog', (err, res)=>{
+    //     console.log("here")
+    //     if (err){
+    //         console.log(err.stack)
+    //         return err.stack
+    //     } else{
+    //         console.log(res.rows)
+    //         return res.rows
+    //     }
+    // })
+    
+    const users = await pool.query('SELECT * FROM user_dog')
+    .then(resolve=>{
+        return resolve.rows
+    }, error =>{
+        console.log(error.message)
+    })
+
+    return users
+
+    // try {
+    //     const users = await pool.query('SELECT * FROM user_dog')
+    //     console.log("users:+"+users)
+    //     return users 
+    // } catch (error) {
+    //    console.log(error)
+    // }
 }
 
 export async function update(name, mail, message, id){

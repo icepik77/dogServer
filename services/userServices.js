@@ -5,9 +5,8 @@ export function createUser(name, mail, message){
     console.log("create user info:"+user)
 }
 
-export function showUsers(){
-    const users = show()
-    console.log("users info:"+users)
+export async function showUsers(){
+    const users = await show()
     return users
 }
 

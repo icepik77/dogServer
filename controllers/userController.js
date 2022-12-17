@@ -5,7 +5,7 @@ export async function createUserController(req, res){
     if (req.body){
         const {name, mail, messageRows} = req.body
         const user = await createUser(name, mail, messageRows)
-        res.sendFile(__dirname+"/public/Dogs/guard.html")
+        res.sendFile(__dirname+"/views/Dogs/guard.html")
     }
     else{
         console.log("Данные из формы не получены")
@@ -15,8 +15,8 @@ export async function createUserController(req, res){
 }
 
 export async function showUsersController(req, res){
-    const users = showUsers()
-    res.json(users)
+    const users = await showUsers()
+    return users
 }
 
 export async function updateUserController(req, res){
